@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import { TodoPage } from '../pages/todo'
 import { NotFound } from '../pages/error/notfound'
 import { HandsontablePage } from '../pages/handsontable'
+import { SpreadsheetPage } from '../pages/spreadsheet'
 
 export const AppRoute = () => {
   return (
@@ -17,6 +18,9 @@ export const AppRoute = () => {
 
       {/* handsontable */}
       <Route path="handsontable" element={<HandsontablePage />} />
+
+      {/* spreadsheet */}
+      <Route path="spreadsheet" element={<SpreadsheetPage />} />
     </Routes>
   )
 }
