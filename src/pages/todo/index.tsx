@@ -15,7 +15,7 @@ export const TodoPage = () => {
   const [filter, setFilter] = useState<Filter>('all')
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setText(e.target.value);
+    setText(e.target.value)
   }
 
   const handleOnCheck = (id: number, checked: boolean) => {
@@ -32,9 +32,8 @@ export const TodoPage = () => {
   }
 
   const handleOnSubmit = (
-    e: React.FormEvent<HTMLFormElement | HTMLInputElement>
+    e: React.FormEvent<HTMLFormElement | HTMLInputElement>,
   ) => {
-
     if (!text) return
 
     const newTodo: Todo = {
@@ -44,7 +43,7 @@ export const TodoPage = () => {
       removed: false,
     }
 
-    setTodos([newTodo, ...todos]);
+    setTodos([newTodo, ...todos])
 
     setText('')
   }
@@ -97,7 +96,10 @@ export const TodoPage = () => {
 
   return (
     <div>
-      <select defaultValue="all" onChange={(e) => setFilter(e.target.value as Filter)}>
+      <select
+        defaultValue="all"
+        onChange={(e) => setFilter(e.target.value as Filter)}
+      >
         <option value="all">すべてのタスク</option>
         <option value="checked">完了したタスク</option>
         <option value="unchecked">現在のタスク</option>
@@ -120,13 +122,13 @@ export const TodoPage = () => {
           <input
             type="text"
             value={text}
-              disabled={filter === 'checked'}
+            disabled={filter === 'checked'}
             onChange={(e) => handleOnChange(e)}
           />
           <input
             type="submit"
             value="追加"
-              disabled={filter === 'checked'}
+            disabled={filter === 'checked'}
             onSubmit={handleOnSubmit}
           />
         </form>

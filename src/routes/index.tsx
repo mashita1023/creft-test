@@ -7,29 +7,16 @@ export const AppRoute = () => {
   return (
     <Routes>
       {/* 404 */}
-      <Route
-        path='*'
-        element={<NotFound />}
-      />
+      <Route path="*" element={<NotFound />} />
 
       {/* root */}
-      <Route
-        index
-        element={<TodoPage />}
-      />
+      <Route index element={<TodoPage />} />
 
       {/* todo */}
-      <Route
-        path='todo'
-        element={<TodoPage />}
-      />
+      <Route path="todo" element={<TodoPage />} />
 
       {/* handsontable */}
-      <Route
-        path='handsontable'
-        element={<HandsontablePage />}
-      />
-
+      <Route path="handsontable" element={<HandsontablePage />} />
     </Routes>
   )
 }
