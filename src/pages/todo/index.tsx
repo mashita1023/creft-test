@@ -9,7 +9,7 @@ type Todo = {
 
 type Filter = 'all' | 'checked' | 'unchecked' | 'removed'
 
-export const App = () => {
+export const TodoPage = () => {
   const [text, setText] = useState('')
   const [todos, setTodos] = useState<Todo[]>([])
   const [filter, setFilter] = useState<Filter>('all')
