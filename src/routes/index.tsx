@@ -4,6 +4,7 @@ import { NotFound } from '../pages/error/notfound'
 import { HandsontablePage } from '../pages/handsontable'
 import { SpreadsheetPage } from '../pages/spreadsheet'
 import { ReactgridPage } from '../pages/reactgrid'
+import { CreftPage } from '../pages/creft'
 
 export const AppRoute = () => {
   return (
@@ -25,6 +26,9 @@ export const AppRoute = () => {
 
       {/* reactgrid */}
       <Route path="reactgrid" element={<ReactgridPage />} />
+
+      {/* 本番用のテスト */}
+      <Route path="creft" element={<CreftPage />} />
     </Routes>
   )
 }
