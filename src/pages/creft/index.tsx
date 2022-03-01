@@ -6,7 +6,7 @@ import {
   Spreadsheet,
 } from 'react-spreadsheet'
 
-import json from './test.json'
+import json from '../../assets/api.json'
 type User = typeof json
 
 /** テスト用のasync関数 */
@@ -20,7 +20,7 @@ const usersToMatrix = (user: User) => {
   )
 
   user.users.map((u, i) =>
-    u.tasks.map((task, j) => {
+    u.tasks.map((task) => {
       d[0][i] = { value: u.name }
       d[1][i] = { value: u.bureau }
       d[task.time_id + 1][i] = { value: task.task }
