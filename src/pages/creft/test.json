@@ -1,0 +1,79 @@
+{
+  "users": [
+    {
+      "name": "user #1",
+      "bureau": "総務",
+      "tasks": [
+        {
+          "task_id": 1,
+          "task": "#1",
+          "time_id": 1,
+          "time": "10:00"
+        },
+        {
+          "task_id": 1,
+          "task": "#1",
+          "time_id": 2,
+          "time": "11:00"
+        },
+        {
+          "task_id": 3,
+          "task": "#2",
+          "time_id": 3,
+          "time": "12:00"
+        }
+      ]
+    },
+    {
+      "name": "user #2",
+      "bureau": "企画",
+      "tasks": [
+        {
+          "task_id": 1,
+          "task": "#1",
+          "time_id": 1,
+          "time": "10:00"
+        },
+        {
+          "task_id": 2,
+          "task": "#2",
+          "time_id": 2,
+          "time": "11:00"
+        },
+        {
+          "task_id": 2,
+          "task": "#2",
+          "time_id": 3,
+          "time": "12:00"
+        }
+      ]
+    },
+    {
+      "name": "user #2",
+      "bureau": "情報",
+      "tasks": [
+        {
+          "task_id": 3,
+          "task": "#3",
+          "time_id": 1,
+          "time": "10:00"
+        },
+        {
+          "task_id": 1,
+          "task": "#1",
+          "time_id": 2,
+          "time": "11:00"
+        },
+        {
+          "task_id": 1,
+          "task": "#1",
+          "time_id": 3,
+          "time": "12:00"
+        }
+      ]
+    }
+  ],
+  "user_count": 3,
+  "task_count": 3,
+  "time_count": 3
+}

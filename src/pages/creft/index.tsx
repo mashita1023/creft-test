@@ -5,9 +5,30 @@ import {
   createEmptyMatrix,
   Spreadsheet,
 } from 'react-spreadsheet'
+
+import json from './test.json'
+type User = typeof json
+
 /** テスト用のasync関数 */
 
 const sleep = (m: number) => new Promise((_) => setTimeout(_, m))
+
+const usersToMatrix = (user: User) => {
+  const d: Matrix<CellBase> = createEmptyMatrix(
+    user.time_count + 2,
+    user.user_count,
+  )
+
+  user.users.map((u, i) =>
+    u.tasks.map((task, j) => {
+      d[0][i] = { value: u.name }
+      d[1][i] = { value: u.bureau }
+      d[task.time_id + 1][i] = { value: task.task }
+    }),
+  )
+
+  return d
+}
 
 export const CreftPage = () => {
   const [data, setData] = useState<Matrix<CellBase>>(
@@ -23,11 +44,16 @@ export const CreftPage = () => {
      本当ならuseEffectより前のところ（描画前）で非同期を動かしたい
     */
     async function asyncFunc() {
-      const waitTime = 3000
+      const waitTime = 10
       console.log(0)
       await sleep(waitTime)
       console.log(waitTime)
-      setData(createEmptyMatrix<CellBase>(10, 1))
+
+      const user: User = json
+
+      const matrix = usersToMatrix(user)
+
+      setData(matrix)
     }
 
     asyncFunc()
@@ -45,8 +71,8 @@ export const CreftPage = () => {
   return (
     <Spreadsheet
       data={data}
-      columnLabels={columnLabels}
-      rowLabels={rowLabels}
+      //      columnLabels={columnLabels}
+      //      rowLabels={rowLabels}
       onChange={(e) => handleOnChange(e)}
     />
   )
