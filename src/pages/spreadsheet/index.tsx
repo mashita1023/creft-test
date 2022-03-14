@@ -30,7 +30,7 @@ const usersToMatrix = (user: User) => {
   return d
 }
 
-export const CreftPage = () => {
+export const SpreadsheetPage = () => {
   const [data, setData] = useState<Matrix<CellBase>>(
     createEmptyMatrix<CellBase>(5, 5),
   )

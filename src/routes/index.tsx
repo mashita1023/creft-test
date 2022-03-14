@@ -5,6 +5,7 @@ import { HandsontablePage } from '../pages/handsontable'
 import { SpreadsheetPage } from '../pages/spreadsheet'
 import { ReactgridPage } from '../pages/reactgrid'
 import { CreftPage } from '../pages/creft'
+import { TablePage } from '../pages/table'
 
 export const AppRoute = () => {
   return (
@@ -26,6 +27,9 @@ export const AppRoute = () => {
 
       {/* reactgrid */}
       <Route path="reactgrid" element={<ReactgridPage />} />
+
+      {/* react- datasheet */}
+      <Route path="table" element={<TablePage />} />
 
       {/* 本番用のテスト */}
       <Route path="creft" element={<CreftPage />} />
