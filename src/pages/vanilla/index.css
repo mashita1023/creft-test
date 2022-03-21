@@ -1,4 +1,5 @@
-table.Sticky__Table {}
+table.Sticky__Table {
+}
 
 .Sticky__Table thead th {
   position: sticky;
@@ -19,10 +20,12 @@ table.Sticky__Table {}
   background: #424242;
 }
 
-.Sticky__Table th, .Sticky__Table td {
+.Sticky__Table th,
+.Sticky__Table td {
   border-collapse: collapse;
   text-align: center;
-  padding: .2rem .5rem;
+  padding: 0;
+  margin: 0;
   font-weight: normal;
 }
 
@@ -30,12 +33,46 @@ table {
   width: 700px;
   -ms-writing-mode: lr-tb;
   writing-mode: vertical-lr;
+  border-spacing: 0;
 }
 
+td,
+th {
+  -ms-writing-mode: lr-tb;
+  writing-mode: horizontal-tb;
+  white-space: nowrap;
+  width: 90px;
+  border-right:0;
+}
 
-td,th{
-    -ms-writing-mode : lr-tb;
-    writing-mode : horizontal-tb;
-    white-space : nowrap;
-    width: 90px
+input {
+  width: 100%;
+  height: auto;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  vertical-align: bottom;
+  text-align: center;
+}
+
+input[type="text"] {
+  border: 1px solid #999;
+}
+input[type="text"]:focus {
+  border: 1px solid #ff9900;
+  outline: 0;
+}
+
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
 }
