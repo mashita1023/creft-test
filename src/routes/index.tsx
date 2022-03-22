@@ -6,6 +6,7 @@ import { SpreadsheetPage } from '../pages/spreadsheet'
 import { ReactgridPage } from '../pages/reactgrid'
 import { CreftPage } from '../pages/creft'
 import { TablePage } from '../pages/table'
+import { VanillaPage } from '../pages/vanilla'
 
 export const AppRoute = () => {
   return (
@@ -30,6 +31,9 @@ export const AppRoute = () => {
 
       {/* react- datasheet */}
       <Route path="table" element={<TablePage />} />
+
+      {/* vanilla page */}
+      <Route path="vanilla" element={<VanillaPage />} />
 
       {/* 本番用のテスト */}
       <Route path="creft" element={<CreftPage />} />
